@@ -1,0 +1,5 @@
+{
+    "ecl.forceProxySupport": true,
+    "ecl.launchConfiguration": "Trainingcluster",
+    "ecl.targetCluster": {}
+}
