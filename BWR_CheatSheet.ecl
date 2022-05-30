@@ -71,24 +71,27 @@ OUTPUT(ds);
 // dedptbl;
 
 // Adicao de campo no dataset
-// rec2 := RECORD
-  // UNSIGNED   recid;  
-	// STRING10   Firstname;
-	// STRING     Lastname;
-	// STRING1    Gender;
-	// UNSIGNED1  Age;
-	// INTEGER    Balance;
-	// DECIMAL7_2 Income;
-// END;
+rec2 := RECORD
+  UNSIGNED   recid;  
+	STRING10   Firstname;
+	STRING     Lastname;
+	STRING1    Gender;
+	UNSIGNED1  Age;
+	INTEGER    Balance;
+	DECIMAL7_2 Income;
+END;
 
-// rec2 MyTransf(rec Le, UNSIGNED cnt) := TRANSFORM
-  // SELF.recid:=cnt;
-  // SELF := Le;
-// END;
+IMPORT STD;
+rec2 MyTransf(rec Le, UNSIGNED cnt) := TRANSFORM
+  SELF.recid:=cnt;
+	SELF.Firstname := STD.Str.ToUpperCase(Le.Firstname);
+	SELF.Lastname := STD.Str.ToUpperCase(Le.LastName);
+  SELF := Le;
+END;
 
-// newds := PROJECT(ds,MyTransf(LEFT,COUNTER));
+newds := PROJECT(ds,MyTransf(LEFT,COUNTER));
 
-//newds;
+newds;
 
 
 
