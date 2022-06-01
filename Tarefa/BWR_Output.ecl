@@ -10,5 +10,7 @@ Crimes_optimized := $.File_crime_optimized.File;
 // STD.DataPatterns.Profile(Crimes_raw);
 // STD.DataPatterns.BestRecordStructure(Crimes_raw);
 
-OUTPUT(Crimes_optimized,NAMED('Optimized_data'));
+// OUTPUT(Crimes_optimized,NAMED('Optimized_data'));
 
+// Tarefa 4
+OUTPUT($.Formatted_File,NAMED('Formatted_File'));

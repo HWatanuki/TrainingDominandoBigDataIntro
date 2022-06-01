@@ -96,12 +96,35 @@ newds;
 
 
 
+rec3 := RECORD
+  STRING10  Firstname;
+	STRING    Lastname;
+	STRING    Email;
+END;
+
+// Declaracao DATASET
+ds2 := DATASET([{'ALYSSON','OLIVEIRA','alysson.oliveira@gmail.com'},
+               {'BRUNO','CAMARGO','bruno.camargo@gmail.com'},
+							 {'ELAINE','SILVA','elaine.silva@gmail.com'},
+							 {'JULIA','CAETANO','julia.caetano@gmail.com'},
+							 {'ODAIR','FERREIRA','odair.ferreira@gmail.com'},
+							 {'ORLANDO','SILVA','orlando.silva@gmail.com'}],rec3);
+OUTPUT(ds2);
 
 
+rec4 := RECORD
+  rec2;
+	rec3.Email;
+END;
 
+rec4 MyTransf2(rec2 Le, rec3 Ri) := TRANSFORM
+  SELF := Le;
+	SELF := Ri;
+END;
 
+joineds := JOIN(newds,ds2,LEFT.Firstname=RIGHT.Firstname AND LEFT.Lastname=RIGHT.Lastname,MyTransf2(LEFT,RIGHT));
 
-
+joineds;
 
 
 
