@@ -13,4 +13,11 @@ Crimes_optimized := $.File_crime_optimized.File;
 // OUTPUT(Crimes_optimized,NAMED('Optimized_data'));
 
 // Tarefa 4
-OUTPUT($.Formatted_File,NAMED('Formatted_File'));
+// OUTPUT($.Formatted_File,NAMED('Formatted_File'));
+
+// Tarefa 5
+// OUTPUT($.NormAddrRecs.File);
+// OUTPUT($.NormCrimeRecs.File);
+
+// Tarefa 6
+ $.CrimeBlockSvc('E 100 PL');

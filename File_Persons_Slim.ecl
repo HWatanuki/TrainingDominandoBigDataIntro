@@ -17,8 +17,6 @@ EXPORT File_Persons_Slim := MODULE
 			UNSIGNED4 CSZ_ID;
 	END;
 	EXPORT File := DATASET('~CLASS::hmw::OUT::Persons_Slim',Layout,FLAT);
-	EXPORT FilePlus := DATASET('~CLASS::hmw::OUT::Persons_Slim',{Layout, UNSIGNED8 RecPos {VIRTUAL(fileposition)}},FLAT);
-	// EXPORT IDX_LName_Fname := INDEX(FilePlus,{LastName,FirstName,RecPos},'~CLASS::hmw::KEY::IDX_Lname_Fname');
 	EXPORT IDX_LName_Fname := INDEX(File,{LastName,FirstName},{File},'~CLASS::hmw::KEY::Lname_Fname');
 
 END;

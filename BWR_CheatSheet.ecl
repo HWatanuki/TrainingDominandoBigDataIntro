@@ -93,9 +93,6 @@ newds := PROJECT(ds,MyTransf(LEFT,COUNTER));
 
 newds;
 
-
-
-
 rec3 := RECORD
   STRING10  Firstname;
 	STRING    Lastname;
@@ -111,7 +108,7 @@ ds2 := DATASET([{'ALYSSON','OLIVEIRA','alysson.oliveira@gmail.com'},
 							 {'ORLANDO','SILVA','orlando.silva@gmail.com'}],rec3);
 OUTPUT(ds2);
 
-
+// Fazendo JOIN de datasets
 rec4 := RECORD
   rec2;
 	rec3.Email;

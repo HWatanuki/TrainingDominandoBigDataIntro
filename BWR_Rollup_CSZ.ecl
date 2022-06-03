@@ -25,6 +25,7 @@ Rollup_CSZ := ROLLUP(S_Recs,
 Rollup_CSZ2 := SORT (Rollup_CSZ,CSZ_ID);
 			
 OUTPUT(Rollup_CSZ2,,'~CLASS::HMW::OUT::LookupCSZ',OVERWRITE);
+// count(Rollup_CSZ2);
 // OUTPUT(Rollup_CSZ,,'~CLASS::HMW::OUT::LookupCSZ',OVERWRITE);
 
 
