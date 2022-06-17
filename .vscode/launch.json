@@ -2,11 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "TrainingCluster",
+            "name": "localhost",
             "type": "ecl",
             "request": "launch",
             "protocol": "http",
-            "serverAddress": "play.hpccsystems.com",
+            "serverAddress": "localhost",
             "port": 8010,
             "targetCluster": "thor",
             "rejectUnauthorized": true,
@@ -16,11 +16,11 @@
             "password": ""
         },
         {
-            "name": "localhost",
+            "name": "TrainingCluster",
             "type": "ecl",
             "request": "launch",
             "protocol": "http",
-            "serverAddress": "localhost",
+            "serverAddress": "play.hpccsystems.com",
             "port": 8010,
             "targetCluster": "thor",
             "rejectUnauthorized": true,
