@@ -6,7 +6,7 @@
             "type": "ecl",
             "request": "launch",
             "protocol": "http",
-            "serverAddress": "54.241.236.29",
+            "serverAddress": "trainingcluster.us-hpccsystems-dev.azure.lnrsg.io",
             "port": 8010,
             "targetCluster": "thor",
             "rejectUnauthorized": true,

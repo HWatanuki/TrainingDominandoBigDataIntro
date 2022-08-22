@@ -1,15 +1,16 @@
 ﻿// *****
 // Elementos constituintes basicos da ECL
 // Uma definicao
-// Mydef := 'Olá mundo';  // definicao do tipo "value"
+//Mydef := 'Olá mundo';  // definicao do tipo "value"
 
 // Uma acao
-// OUTPUT('Olá mundo');
-// OUTPUT(mydef);
+OUTPUT('Olá mundo');
+//OUTPUT(mydef);
 
 // *****
 // Estruturas de dados basicas em ECL
 // Estrutura RECORD
+/*
 rec := RECORD
   STRING10  Firstname;
 	STRING    Lastname;
@@ -27,7 +28,7 @@ ds := DATASET([{'Alysson','Oliveira','M',26,100,1000.50},
 							 {'Odair','Ferreira','M',66,350,6000},
 							 {'Orlando','Silva','U',67,300,4000}],rec);
 OUTPUT(ds);
-
+*/
 // *****
 // Filtragem e tabulaçao de datasets
 // recset := ds(Age<65);
@@ -71,7 +72,7 @@ OUTPUT(ds);
 // dedptbl;
 
 // Adicao de campo no dataset
-rec2 := RECORD
+/*rec2 := RECORD
   UNSIGNED   recid;  
 	STRING10   Firstname;
 	STRING     Lastname;
@@ -98,8 +99,9 @@ rec3 := RECORD
 	STRING    Lastname;
 	STRING    Email;
 END;
-
+*/
 // Declaracao DATASET
+/*
 ds2 := DATASET([{'ALYSSON','OLIVEIRA','alysson.oliveira@gmail.com'},
                {'BRUNO','CAMARGO','bruno.camargo@gmail.com'},
 							 {'ELAINE','SILVA','elaine.silva@gmail.com'},
@@ -107,21 +109,21 @@ ds2 := DATASET([{'ALYSSON','OLIVEIRA','alysson.oliveira@gmail.com'},
 							 {'ODAIR','FERREIRA','odair.ferreira@gmail.com'},
 							 {'ORLANDO','SILVA','orlando.silva@gmail.com'}],rec3);
 OUTPUT(ds2);
-
+*/
 // Fazendo JOIN de datasets
-rec4 := RECORD
+/*rec4 := RECORD
   rec2;
-	rec3.Email;
+  rec3.Email;
 END;
 
 rec4 MyTransf2(rec2 Le, rec3 Ri) := TRANSFORM
   SELF := Le;
-	SELF := Ri;
+  SELF := Ri;
 END;
 
 joineds := JOIN(newds,ds2,LEFT.Firstname=RIGHT.Firstname AND LEFT.Lastname=RIGHT.Lastname,MyTransf2(LEFT,RIGHT));
-
 joineds;
+*/
 
 
 

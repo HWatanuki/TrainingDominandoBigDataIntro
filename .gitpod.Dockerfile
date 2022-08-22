@@ -17,4 +17,4 @@ RUN ecl bundle install https://github.com/hpcc-systems/KMeans.git
 RUN ecl bundle install https://github.com/hpcc-systems/LinearRegression.git
 RUN ecl bundle install https://github.com/hpcc-systems/LogisticRegression.git
 RUN ecl bundle install https://github.com/hpcc-systems/LearningTrees.git
-RUN ecl bundle install https://github.com/hpcc-systems/GNN.git
+RUN ecl bundle install https://github.com/hpcc-systems/DataPatterns.git
