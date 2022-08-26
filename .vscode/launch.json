@@ -12,7 +12,7 @@
             "rejectUnauthorized": true,
             "resultLimit": 100,
             "timeoutSecs": 60,
-            "user": "gitpod_user",
+            "user": "hmw",
             "password": ""
         },
         {
