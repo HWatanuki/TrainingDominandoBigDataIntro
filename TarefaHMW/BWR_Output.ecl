@@ -11,5 +11,7 @@ OUTPUT(Crimes_raw,NAMED('Raw_data'));
 // DataPatterns.BestRecordStructure(Crimes_raw);
 // DataPatterns.BestRecordStructure(Crimes_raw);
 // DataPatterns.Benford(Crimes_raw, 'community_area');
-
 // OUTPUT(Crimes_optimized,NAMED('Optimized_data'));
+
+// Tarefa 4
+OUTPUT($.Formatted_File,NAMED('Formatted_File'));
