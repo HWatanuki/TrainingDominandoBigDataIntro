@@ -18,6 +18,6 @@ mysrt := SORT(myds,firstname,lastname);
 mydp1 := DEDUP(mysrt,firstname,lastname);			
 mydp1;
 			
-mydp2 := DEDUP(mydp1,LEFT.lastname = RIGHT.firstname,RIGHT);  
+mydp2 := DEDUP(mydp1,LEFT.lastname = RIGHT.firstname);  
 mydp2;
 			
