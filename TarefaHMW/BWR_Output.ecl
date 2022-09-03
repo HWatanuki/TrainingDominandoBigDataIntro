@@ -17,10 +17,10 @@ Crimes_optimized := $.File_crime_optimized.File;
 // OUTPUT($.Formatted_File,NAMED('Formatted_File'));
 
 // Tarefa 5
-// OUTPUT($.NormAddrRecs.File);
+OUTPUT($.NormAddrRecs.File);
 // OUTPUT($.NormCrimeRecs.File);
 
 // Tarefa 6
-$.CrimeBlockSvc('E 100 PL'); //residential area
-$.CrimeBlockSvc('N STATE ST'); //commercial area with retail theft
-$.CrimeBlockSvc('E Jackson BLVD'); //area with building theft
+// $.CrimeBlockSvc('E 100 PL'); //residential area
+// $.CrimeBlockSvc('N STATE ST'); //commercial area with retail theft
+// $.CrimeBlockSvc('E Jackson BLVD'); //area with building theft

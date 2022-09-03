@@ -11,23 +11,23 @@
 // Estruturas de dados basicas em ECL
 // Estrutura RECORD
 
-rec := RECORD
-  STRING10  Firstname;
-	STRING    Lastname;
-	STRING1   Gender;
-	UNSIGNED1 Age;
-	INTEGER   Balance;
-	DECIMAL7_2 Income;
-END;
+// rec := RECORD
+//   STRING10  Firstname;
+// 	STRING    Lastname;
+// 	STRING1   Gender;
+// 	UNSIGNED1 Age;
+// 	INTEGER   Balance;
+// 	DECIMAL7_2 Income;
+// END;
 
 // Declaracao DATASET
-ds := DATASET([{'Alysson','Oliveira','M',26,100,1000.50},
-               {'Bruno','Camargo','',22,-100,500.00},
-							 {'Elaine','Silva','F',19,-50,750.60},
-							 {'Julia','Caetano','F',45,500,5000},
-							 {'Odair','Ferreira','M',66,350,6000},
-							 {'Orlando','Silva','U',67,300,4000}],rec);
-OUTPUT(ds);
+// ds := DATASET([{'Alysson','Oliveira','M',26,100,1000.50},
+//                {'Bruno','Camargo','',22,-100,500.00},
+// 							 {'Elaine','Silva','F',19,-50,750.60},
+// 							 {'Julia','Caetano','F',45,500,5000},
+// 							 {'Odair','Ferreira','M',66,350,6000},
+// 							 {'Orlando','Silva','U',67,300,4000}],rec);
+// OUTPUT(ds);
 
 // *****
 // Filtragem e tabulaçao de datasets
@@ -46,16 +46,16 @@ OUTPUT(ds);
 // recset;						// definição do tipo "recordset"
 // COUNT(recset);    //Equivale a: OUTPUT(COUNT(recset));
 
-rec2 := RECORD
-  ds.Gender;
-	cnt := COUNT(GROUP);
-END;
+// rec2 := RECORD
+//   ds.Gender;
+// 	cnt := COUNT(GROUP);
+// END;
 
-crosstab := TABLE(ds,rec2,Gender);
-crosstab;
+// crosstab := TABLE(ds,rec2,Gender);
+// crosstab;
 
-avg := AVE(crosstab,cnt);
-avg;
+// avg := AVE(crosstab,cnt);
+// avg;
 
 // *****
 // Transformacoes basicas em ECL
@@ -125,28 +125,28 @@ joineds := JOIN(newds,ds2,LEFT.Firstname=RIGHT.Firstname AND LEFT.Lastname=RIGHT
 joineds;
 */
 
-/*
+
 rec := RECORD
-  STRING firstname;
+    STRING firstname;
 	STRING lastname;
 	UNSIGNED age;
 END;
 
 ds := DATASET([{'Wendy','Frost',34},
                {'Albert','John',34},
-							 {'Natan','Bun',45},
-							 {'Carl','Moore',56},
-							 {'Jimmy','John',66}]
+			   {'Natan','Bun',45},
+			   {'Carl','Moore',56},
+			   {'Jimmy','John',66}]
 							 ,rec);
 OUTPUT(ds); // this OUTPUT exemplifies a dataflow parallelism to be shown via the graphs
 
 mysort1 := SORT(ds,firstname);  //this sort will be ignored by the compiler unless you explicitely asks for its OUTPUT as this sort does not affect the end result
 																//(exemplifies a dataflow optimization to be shown via the graphs)
-// OUTPUT(mysort1); 
+//OUTPUT(mysort1); 
 
 mysort2 := SORT(mysort1,lastname); //this sort will actually only be done after the filter is applied since the compiler understands that only a subset of data needs to be sorted by then 
                                    //(exemplifies another dataflow optimization to be shown via the graphs)
 
 myfilter := mysort2(age>50); 
 OUTPUT(myfilter);
-*/
+

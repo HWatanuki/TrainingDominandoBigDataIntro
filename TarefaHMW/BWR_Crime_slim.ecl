@@ -8,7 +8,7 @@
 	 	// UNSIGNED4 time;
 		// STRING11 Case_Number;
 		// STRING4 IUCR;
-  	// STRING33 Primary_Type;
+  	    // STRING33 Primary_Type;
 		// STRING60 Description;
 		// UNSIGNED4 block_ID;
   // END;
